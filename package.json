@@ -1,0 +1,26 @@
+{
+  "name": "internship-api",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "bun run server.js",
+    "dev": "bun --watch server.js"
+  },
+  "keywords": [
+    "api",
+    "mongodb",
+    "express",
+    "task-management"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.19.1",
+    "nodemon": "^3.1.10"
+  }
+}
