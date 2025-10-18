@@ -33,10 +33,31 @@ router.post('/', async (req, res) => {
 // GET all tasks
 router.get('/', async (req, res) => {
   try {
-    const tasks = await Task.find().sort({ createdAt: -1 });
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
+    const skip = (page - 1) * limit;
+
+    const totalTasks = await Task.countDocuments();
+
+    const totalPages = Math.ceil(totalTasks / limit);
+
+    const tasks = await Task.find()
+      .sort({ createdAt: -1 })  // -1 = descending (newest first)
+      .skip(skip)
+      .limit(limit);
+    
     res.json({
       success: true,
       count: tasks.length,
+      pagination: {
+        currentPage: page,
+        totalPages: totalPages,
+        totalTasks: totalTasks,
+        tasksPerPage: limit,
+        hasNextPage: page < totalPages,
+        hasPrevPage: page > 1
+      },
       data: tasks
     });
   } catch (error) {
@@ -45,6 +66,7 @@ router.get('/', async (req, res) => {
       message: 'Error fetching tasks',
       error: error.message
     });
+
   }
 });
 
