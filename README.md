@@ -782,44 +782,10 @@ bun install
 
 ---
 
-## 📝 Submission Checklist
-
-Before submitting your project, ensure:
-
-- [ ] All code files are created and properly formatted
-- [ ] `.env` file is configured with correct MongoDB URI
-- [ ] Server starts without errors
-- [ ] All 5 CRUD endpoints are working
-- [ ] Pagination is implemented and tested
-- [ ] Error handling is working for all edge cases
-- [ ] At least 13 Postman test screenshots taken
-- [ ] Postman collection exported as JSON
-- [ ] README.md is included
-- [ ] Code is well-commented
-- [ ] `.gitignore` includes `.env` and `node_modules`
-
----
-
-## 📧 Support
-
-For issues or questions:
-- Review the troubleshooting section
-- Check MongoDB Atlas connection
-- Verify all dependencies are installed
-- Contact internship coordinator
-
----
-
-## 📄 License
-
-This project is created for educational purposes as part of the Sourceagle internship assessment.
-
----
-
 ## 👨‍💻 Author
 
-**Your Name**  
-Sourceagle Internship - October 2024
+**Ruchir Kalokhe**  
+Sourceagle Internship - October 2025
 
 ---
 
@@ -835,5 +801,4 @@ Sourceagle Internship - October 2024
 
 ---
 
-**Last Updated:** October 18, 2024  
-**Version:** 1.0.0
+**Last Updated:** October 18, 2025  1:11 p.m.. IST
